@@ -1,8 +1,5 @@
-Survival Deutschland v1.8.5 — Fehlerkorrektur
+Survival Deutschland v1.8.6
 
-Behoben: JavaScript-Syntaxfehler in Version 1.8.4, durch falschen Einfügeort der Bilddaten. Dies hatte eine leere Hauptansicht und nicht funktionierende Navigation verursacht.
-Bilddaten wurden in SURVIVAL_INLINE_IMAGES eingefügt. Neue Cache-Version 1.8.5.
-
-Fotorealistische Bilder sind KI-Lehrbilder, keine geprüften Bestimmungsfotos. Zubereitung und Rechtslage müssen eigenständig fachlich überprüft werden.
-
-Nachkontrolle: Krebs-KI-Lehrbilder korrekt auf die jeweilige Kachel zugeschnitten.
+Änderung: Alle Fischarten und alle in der App gelisteten Krebsarten besitzen nun ein eingebundenes Bild.
+Quelle der neuen Artenbilder: KI-Lehrbild-Collagen, in passende Einzelbilder für die WebApp aufgeteilt.
+Bestehende Inhalte zu Zubereitung, Schutzstatus, Mindestmaß und Gefahren bleiben unverändert erhalten.
