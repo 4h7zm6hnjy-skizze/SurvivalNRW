@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d1916">
+  <meta name="description" content="Survival NRW – mobiles Offline-Notfallhandbuch mit KI-Bildern, Pflanzenkunde, Erste Hilfe und Checklisten.">
+  <title>Survival NRW – Das Outdoor-Notfallhandbuch</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+ <div class="app-shell">
+  <header class="topbar">
+   <a href="#/" class="brand" aria-label="Survival NRW Startseite"><span class="brand-mark" aria-hidden="true">▲</span><span class="brand-lines"><b>SURVIVAL<span class="brand-hl">NRW</span></b><small>FIELD GUIDE · 1.1</small></span></a>
+   <div class="topbar-actions"><span id="netstatus" class="status-pill">Survival NRW</span><a class="emergency-top" href="#/notfall" aria-label="Notfall-Seite">SOS</a></div>
+  </header>
+  <main id="view" class="view" aria-live="polite"></main>
+  <nav class="bottom-nav" aria-label="Hauptnavigation">
+    <a href="#/" data-nav="home"><span class="nav-icon" data-icon="home"></span><span>Start</span></a>
+    <a href="#/wissen" data-nav="wissen"><span class="nav-icon" data-icon="book"></span><span>Wissen</span></a>
+    <a href="#/pflanzen" data-nav="pflanzen"><span class="nav-icon" data-icon="leaf"></span><span>Pflanzen</span></a>
+    <a href="#/check" data-nav="check"><span class="nav-icon" data-icon="check"></span><span>Listen</span></a>
+    <a href="#/mehr" data-nav="mehr"><span class="nav-icon" data-icon="menu"></span><span>Mehr</span></a>
+  </nav>
+ </div>
+ <dialog id="gallery-dialog" class="image-dialog" aria-label="Bildansicht"><div class="dialog-bar"><span class="dialog-count">1 / 25</span><button type="button" class="btn secondary small" data-action="image-close" aria-label="Bild schließen">Schließen ×</button></div><img src="" alt=""><div class="dialog-footer"><button type="button" class="btn secondary small" data-action="image-prev" aria-label="Vorheriges Bild">←</button><strong class="dialog-title">Bild</strong><button type="button" class="btn secondary small" data-action="image-next" aria-label="Nächstes Bild">→</button></div><p>KI-generierte Rekonstruktion · keine botanisch oder technisch geprüfte Realaufnahme</p></dialog>
+ <div id="toast" class="toast" role="status" aria-live="polite"></div>
+ <noscript>Diese Web-App benötigt JavaScript. Bitte aktiviere JavaScript in deinem Browser.</noscript>
+</body>
+</html>
