@@ -2,7 +2,7 @@
   "name": "Survival NRW – Das Outdoor-Notfallhandbuch",
   "short_name": "Survival NRW",
   "id": "./",
-  "description": "Offline nutzbares NRW-Notfallhandbuch mit KI-Fotogalerie, Pflanzenkunde, Jagdhygiene, Wasser und Checklisten.",
+  "description": "Offline nutzbares NRW-Notfallhandbuch mit Bauanleitungen, Pflanzenkunde, Wildtiere, Orientierung und Checklisten.",
   "start_url": "./index.html#/",
   "scope": "./",
   "display": "standalone",

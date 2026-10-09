@@ -1,32 +1,41 @@
-SURVIVAL NRW – Version 1.2.0
-================================
+SURVIVAL NRW · VERSION 1.3.0
+============================================================
 
-Dieses Paket ist für das Repository:
-https://github.com/4h7zm6hnjy-skizze/SurvivalNRW
+ANLEITUNG ZUM UPDATE AUF GITHUB:
+1. Das ZIP-Paket ENTpacken, nicht die ZIP-Datei bei GitHub hochladen.
+2. Auf https://github.com/4h7zm6hnjy-skizze/SurvivalNRW den Branch main öffnen.
+3. Den Inhalt des Update-Pakets in den Stammordner des Repositorys hochladen.
+4. Bereits vorhandene gleichnamige Dateien müssen ersetzt werden. Keine verschachtelten Unterordner anlegen.
+5. Commit changes bestätigen und GitHub Pages etwas Zeit zum Veröffentlichen geben.
+6. App https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/ im Browser neu laden.
+7. Unter Mehr -> Auf Updates prüfen und unter Mehr -> Offline prüfen testen.
 
-Neu:
-- Bildpfade auf das bereits hochgeladene Hauptverzeichnis korrigiert.
-- Gut sichtbare Versionsnummer v1.2.0 oben rechts und unter „Mehr“.
-- Schaltfläche „Auf Updates prüfen“ unter Mehr & Einstellungen.
-- version.json als Quelle für künftige veröffentlichte Versionsnummern.
-- Offline-Cache für alle 25 lokalen Bilder.
+NEU:
+* 60 Pflanzen-Referenzsteckbriefe (9 vorhandene KI-Nachbildungen; 51 weitere ausdrücklich OHNE geprüftes Artenfoto)
+* 8 Praxisanleitungen mit Materiallisten und kontrollierbaren Schritten, Übungsnotizen und eigenen Fotos
+* 6 Wildtier-/Spurensteckbriefe, Wildbrethygiene-Hinweise
+* Situationsbezogener Notfallassistent mit sechs Szenarien und Notruf 112
+* Giftpflanzen- und Verwechslungsbereich
+* Benutzerimport von Kartenbildern, Wegpunkte und zusätzlicher GPX/GeoJSON-Trackviewer ohne Kartenhintergrund
+* Unverbindlicher Materialrechner (keine Statikprüfung)
+* Fortschrittsliste für Kapitel und Übungen
+* Checklisten für 24 Stunden, 72 Stunden, 7 Tage, Winter und Unwetter
+* Offline-Statusprüfung und lokale Nachspeicherung
+* JSON-Backup für Notizen, Checklisten, Favoriten, Wegpunkte und Lernstände
+* Versionsverlauf und Update-Suche
 
-WICHTIG: Es handelt sich um eine statische GitHub-Pages-Web-App. Die
-Updateprüfung ist nur bei Online-Verbindung möglich. Der Button meldet
-eine neuere Version nur, wenn version.json auf dem Server eine höhere
-Versionsnummer enthält. Für künftige Releases Version in data.js,
-index.html, sw.js und version.json synchron aktualisieren.
+ERHALTEN:
+* Alle 13 Wissenskapitel aus der Vorversion
+* Alle 25 KI-generierten WebP-Bilder
+* Merkliste, Notizen, Galerie, Suche, SOS und GPS
 
-GitHub-Upload: Die Inhalte des ZIP-Archivs direkt in den Stammordner des
-Branch main hochladen, nicht den ZIP selbst und keinen zusätzlichen
-Unterordner. Bestehende gleichnamige Dateien überschreiben und
-„Commit changes“ bestätigen. Danach unter Settings > Pages prüfen,
-dass main und /(root) als Quelle gewählt sind.
+GRENZEN:
+Die App ist ein privates Nachschlagewerk. KI-Bilder sind keine geprüften Naturfotos und reichen nicht zur Pflanzenbestimmung.
+Pflanzen-Referenzsteckbriefe stellen keine Essbarkeits-, Sammel- oder medizinische Freigabe dar.
+Rechtslagen für Feuer, Jagd, Fischerei, Naturschutz sind orts- und situationsabhängig und müssen separat geprüft werden.
+Improvisierte Wasserfilter töten Keime nicht zuverlässig ab und entfernen viele Chemikalien nicht.
+Eine gezeichnete GPS-Linie ist keine Navigationskarte und kein Ersatz für verlässliche Offline-Karten.
+Ein eigenes Kartenbild und persönliche Übungsfotos werden separat in IndexedDB gespeichert und sind NICHT im JSON-Backup enthalten; einzeln sichern.
+Bei Notfällen Rettungsdienst 112 kontaktieren, behördlichen Informationen folgen.
 
-Startseite der App nach erfolgreicher Veröffentlichung:
-https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/
-
-Erst nach dem vollständigen Laden die Web-App zum iPhone Home-Bildschirm
-hinzufügen. KI-Pflanzenbilder sind keine verlässliche Bestimmungsgrundlage.
-
-Version 1.2.0 | 9. Oktober 2026
+Stand: 9. Oktober 2026.
