@@ -1,10 +1,14 @@
 {
-  "version": "1.7.3",
+  "version": "1.8.0",
   "released": "2026-10-09",
   "notes": [
-    "Alle bislang fehlenden 51 Pflanzenprofile haben nun integrierte KI-Lehrbilder",
-    "Pflanzenkarten sind weiterhin klar als KI-Lehrbilder gekennzeichnet und nicht als botanisch verifizierte Bestimmungsfotos",
-    "Vorhandene 9 Pflanzenbilder, Feuerzeichnungen, Suche, Wegpunkte und 6-km-Kartenfunktion bleiben erhalten"
+    "15 neue offline verfügbare Wissens- und Werkzeugbereiche",
+    "GPS-Track mit GPX-Export bei geöffneter App und Standortberechtigung",
+    "Vergleich der 60 KI-Lehrbild-Pflanzen, saisonale Hinweise",
+    "Unterschlupf-/Wasserberater, 8 Notfallszenarien, 30 Tier-Steckbriefe",
+    "10 Werkzeugprofile, 20 Knotenanleitungen, 8 Wetterthemen",
+    "12 Wildnisküchen-Rezepte, 12 Pilzrisikoprofile",
+    "Lokale Lager- und Packlisten, 16 Quizfragen, Rechts-/Naturschutzinfos für 16 Länder"
   ],
-  "limit": "KI-Lehrbilder ersetzen keine sichere Bestimmung im Feld; für Sammeln und Verzehr stets zusätzlich prüfen"
+  "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen."
 }
