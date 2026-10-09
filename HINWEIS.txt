@@ -1,0 +1,2 @@
+Dies ist der Umsetzungsplan für Survival Deutschland v1.7.0, nicht die fertige App.
+Enthält das verbindliche Offline-Kartenprofil: Topografie + Satellit, 6 km Durchmesser.
