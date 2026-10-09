@@ -1,11 +1,10 @@
 {
-  "version": "1.5.0",
+  "version": "1.5.1",
   "released": "2026-10-09",
   "notes": [
-    "Sofort nutzbare, vereinfachte Offline-Deutschlandkarte mit GPS-Punkt",
-    "Bundesländer direkt in der Navigation sichtbar",
-    "9 Unterschlupf-Varianten mit bebilderten Schritten",
-    "Wildbret-Anleitungen für Reh, Wildschwein, Hase und Federwild",
-    "Bisherige Inhalte und Bilder bleiben erhalten"
+    "Reparierte Startadressen und alte App-Lesezeichen",
+    "Sichere Navigation zu allen bestehenden Hauptbereichen",
+    "Entfernte doppelte Offline-Dateieinträge",
+    "Aktualisierter Versionsstatus und Offline-Cache"
   ]
 }
