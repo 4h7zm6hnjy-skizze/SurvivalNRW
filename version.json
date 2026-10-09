@@ -1,11 +1,11 @@
 {
-  "version": "1.8.6",
+  "version": "1.8.7",
   "released": "2026-10-09",
   "notes": [
-    "Alle Fischarten und alle in der App geführten Krebsarten besitzen jetzt ein eigenes Bild",
-    "Fehlende Artenbilder aus den Bereichen Fische und Flusskrebse wurden passend in die Artkarten eingebunden",
-    "Zubereitungshinweise, Schutzstatus, Mindestmaße und Warnhinweise bleiben vollständig erhalten"
+    "Reparatur des JavaScript-Startfehlers in Version 1.8.6: Bilddaten korrekt in die bestehende Bildtabelle eingefügt",
+    "29 Fisch- und 9 Krebs-/Krabbenarten besitzen eingebettete fotorealistische KI-Lehrbilder",
+    "Bestehende Suchfunktionen, Zubereitung, Schutzstatus, Mindestmaße, Navigation und Speicherfunktionen bleiben erhalten"
   ],
   "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
-  "limit": "Gilt nur für NRW; lokale Gewässerordnungen und aktuelle Rechtslage vor jedem Fang prüfen. Lehrskizzen keine Artenfotos. Keine automatische Fangfreigabe."
+  "limit": "KI-Lehrbilder ersetzen keine verifizierten Artenfotos oder sichere Artbestimmung. Reale iPhone- und Offline-Gerätetests ausstehend."
 }

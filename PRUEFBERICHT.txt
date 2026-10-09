@@ -1,5 +1,6 @@
-Survival Deutschland v1.8.6
+Survival Deutschland – v1.8.7
 
-Änderung: Alle Fischarten und alle in der App gelisteten Krebsarten besitzen nun ein eingebundenes Bild.
-Quelle der neuen Artenbilder: KI-Lehrbild-Collagen, in passende Einzelbilder für die WebApp aufgeteilt.
-Bestehende Inhalte zu Zubereitung, Schutzstatus, Mindestmaß und Gefahren bleiben unverändert erhalten.
+Der JS-Startfehler der 1.8.6 wurde behoben, indem neue Artenbilder innerhalb der vorgesehenen Bildtabelle ergänzt wurden.
+In der App stehen 29 Fischarten und 9 Krebs-/Krabbenarten mit KI-Lehrbildern. Vorhandene Zubereitungen und Warnungen bleiben erhalten.
+Prüfungen: JavaScript-Syntax; Bilder (Dekodierung); Browser Start/Navigation/Kartenlisten; ZIP-Konsistenz.
+KI-Lehrbilder sind nicht artsicher. Echtbetrieb am iPhone noch erforderlich.
