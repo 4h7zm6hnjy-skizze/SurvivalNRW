@@ -1,31 +1,7 @@
-SURVIVAL DEUTSCHLAND 1.8.0 – LOKALER PRUEFBERICHT
+Survival Deutschland v1.8.1 — Knotenschule
 
-Erstellt: 09.10.2026
+20 Knoten erhalten nummerierte schematische Schrittbilder mit Pfeilen.
+Die Bilder sind didaktische Illustrationen, keine zertifizierten Knotenfolgen.
+Doppelte Knotenkennungen behoben.
 
-Erweiterungen:
-- 15 Fach- und Werkzeugbereiche in vorhandene App integriert
-- Pflanzendirektvergleich mit 60 KI-Lehrbildprofilen
-- GPS-Streckenaufzeichnung und GPX-Export (nur bei geoeffneter App mit GPS-Berechtigung)
-- Unterschlupf- und Wasserberater, 8 Notfallszenarien
-- 30 Tierprofile, 10 Werkzeugprofile, 20 Knotenverweise, 8 Wetterthemen
-- 12 Rezeptideen, 12 Pilzrisikoprofile, Lagerplan, Packlisten, 16 Quizfragen
-- Rechts-/Naturschutzhinweise fuer alle 16 Bundeslaender
-
-Erfolgreich lokal getestet:
-- 30 Beispielrouten und neue 15 Bereichskarten im Browser erreichbar
-- Pflanzenvergleich mit zwei Auswahlfeldern inklusive Loewenzahn- und Robinienbild
-- 60 Pflanzenkarten vorhanden; 100 eingebettete Bilder lassen sich dekodieren
-- Unterschlupf-Berater, Wasserberater, Packlisten, Quiz und Lagerplan getestet
-- Lokale Speichervorgaenge mit simuliertem Browser-Speicher getestet
-- In durchgefuehrten Seiten- und Interaktionstests keine JavaScript-Laufzeitfehler
-- ZIP-Struktur und Dateigleichheit mit der Einzel-HTML geprueft
-
-Wichtige Grenzen:
-- GPS, Karten-Onlinequellen, Download und Karten im Flugmodus NICHT auf dem echten iPhone geprueft
-- Browser-Speichertest verwendet lokalen Test-Ersatz, keine iOS-Persistenzgarantie
-- Kartenkacheln muessen vorher bei Internetverbindung fuer 6-km-Bereich gespeichert werden
-- Nur kostenlose Kartendaten mit erforderlichen Quellenangaben; keine Gebuehren
-- Bilder von Pflanzen sind KI-Lehrillustrationen, keine verifizierten Bestimmungsfotos
-- Pilz- und Pflanzeninformationen sind keine Essens-/Verzehrfreigabe
-- Rechts- und Wetterinfos sind nicht tagesaktuell
-- GPS-Aufzeichnung erfordert eine geoeffnete Web-App; Hintergrundaufzeichnung nicht garantiert
+Hinweis: Keine Personen-, Kletter- oder Schwerlastsicherung auf Grundlage dieser Zeichnungen.

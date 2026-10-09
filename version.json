@@ -1,14 +1,12 @@
 {
-  "version": "1.8.0",
+  "version": "1.8.1",
   "released": "2026-10-09",
   "notes": [
-    "15 neue offline verfügbare Wissens- und Werkzeugbereiche",
-    "GPS-Track mit GPX-Export bei geöffneter App und Standortberechtigung",
-    "Vergleich der 60 KI-Lehrbild-Pflanzen, saisonale Hinweise",
-    "Unterschlupf-/Wasserberater, 8 Notfallszenarien, 30 Tier-Steckbriefe",
-    "10 Werkzeugprofile, 20 Knotenanleitungen, 8 Wetterthemen",
-    "12 Wildnisküchen-Rezepte, 12 Pilzrisikoprofile",
-    "Lokale Lager- und Packlisten, 16 Quizfragen, Rechts-/Naturschutzinfos für 16 Länder"
+    "Knotenschule: alle 20 Knoten und Bünde erhalten nummerierte Bildschritte mit gelben Führungspfeilen",
+    "Detailansichten: Großbild, antippbare Schrittgalerie und Zurück-/Weiter-Navigation",
+    "Doppelte IDs bei Ankerstich- und Sackstich-Varianten beseitigt",
+    "Vorherige Inhalte, GPS, Pflanzendarstellungen, Favoriten und lokale Notizen bleiben erhalten"
   ],
-  "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen."
+  "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
+  "limit": "Die Seilschemata sind illustrative Näherungen, keine unabhängig geprüften Knotenzeichnungen. Nicht für Personen- oder Lastsicherung verwenden."
 }
