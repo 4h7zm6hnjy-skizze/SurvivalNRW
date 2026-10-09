@@ -1,10 +1,11 @@
 {
-  "version": "1.5.1",
+  "version": "1.6.0",
   "released": "2026-10-09",
   "notes": [
-    "Reparierte Startadressen und alte App-Lesezeichen",
-    "Sichere Navigation zu allen bestehenden Hauptbereichen",
-    "Entfernte doppelte Offline-Dateieinträge",
-    "Aktualisierter Versionsstatus und Offline-Cache"
+    "Modernisierte, kontrastreiche Mobilansicht",
+    "Echte TopPlusOpen-Karte mit GPS und manuellem Kartendownload",
+    "Sentinel-2 Satellitenebene (2016), offline ausgewählte Ausschnitte",
+    "Nur gebührenfreie offene Kartendaten mit sichtbaren Quellenhinweisen",
+    "Bestehende Inhalte und gespeicherte Daten bleiben erhalten"
   ]
 }

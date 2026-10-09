@@ -1,0 +1,19 @@
+KARTENQUELLEN UND LIZENZEN – SURVIVAL DEUTSCHLAND 1.6.0
+
+Topografie: TopPlusOpen © Bundesamt für Kartographie und Geodäsie (BKG). Datenlizenz Deutschland – Namensnennung 2.0, kostenlose Nutzung einschließlich Offline-Nutzung.
+https://gdz.bkg.bund.de/index.php/default/wmts-topplusopen-wmts-topplus-open.html
+https://www.govdata.de/dl-de/by-2-0
+https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/datenquellen_topplusopen.html
+Offline-Kartendownloads erfordern einen datierten Quellenvermerk; die App hält das Bezugsdatum vor und zeigt es beim gespeicherten Material an.
+
+Satellit: Sentinel-2 cloudless 2016, EOX IT Services GmbH; Contains modified Copernicus Sentinel data 2016 & 2017. Creative Commons Attribution 4.0 (CC BY 4.0), keine Lizenzgebühren, Namensnennung erforderlich.
+https://s2maps.eu/#license
+https://creativecommons.org/licenses/by/4.0/
+Die Bilder sind aus 2016/2017: Veränderungen vor Ort seitdem sind NICHT dargestellt.
+
+Bundesländergrenzen: isellsoap/deutschlandGeoJSON, Unlicense/public domain.
+https://github.com/isellsoap/deutschlandGeoJSON
+
+Keine kostenpflichtigen Karten-APIs, keine Kartendaten ohne zulässiges Offline-Speicherrecht. Das Herunterladen von Kartenausschnitten setzt eine Internetverbindung voraus und funktioniert nur, solange die externen Kartendienste erreichbar sind.
+
+Die in der App enthaltenen KI-Grafiken sind Rekonstruktionen, keine geprüften Fotos.

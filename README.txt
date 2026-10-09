@@ -1,27 +1,19 @@
-SURVIVAL DEUTSCHLAND – REPARATUR 1.5.1
+SURVIVAL DEUTSCHLAND – VERSION 1.6.0
+MODERNES DESIGN / TOPOGRAFIE / SATELLIT / OFFLINE
 
-Dieses Update behebt insbesondere ältere Startseiten-Links (z.B. #/start).
-Vorhandene Bilder und lokale Nutzerdaten bleiben erhalten.
+WICHTIG:
+- Nur frei und ohne Lizenzgebühren nutzbare Kartengrundlagen, mit vorgeschriebenen Quellenangaben.
+- Topografie: BKG TopPlusOpen – Datenlizenz Deutschland Namensnennung 2.0, © BKG.
+- Satellit: EOX Sentinel-2 cloudless **2016** – CC BY 4.0, Quelle EOX / Copernicus.
+- Nicht die neueren, auf nicht-kommerzielle Nutzung beschränkten EOX-Kacheln.
+- Die Lizenzbedingungen sind in LICENSE-KARTEN.txt und in der App erklärt.
 
-BASISFUNKTIONEN AUS VERSION 1.5.0
-Veröffentlichung: GitHub Pages, Branch main, Ordner /(root).
-Dateien aus dem ZIP entpacken und sämtliche Inhalte im Stammverzeichnis hochladen.
+KARTEN: Mit Internet Kartenausschnitt und Kartentyp wählen, Taste »Beide Karten offline speichern« drücken, Download bestätigen und anschließend im Flugmodus testen. Ohne vorherigen Download keine Wegkarten/Satellitenbilder offline. Offline-GPS benötigt Ortungsberechtigung und geeignete Hardware. Kartenausschnitte bleiben nur erhalten, wenn der Browser die Cache-Daten nicht löscht. Die 2016er Satellitenaufnahmen sind NICHT aktuell.
 
-Neu in 1.5.0:
-- Alle 16 Bundesländer direkt über die untere Navigation
-- Vereinfachte Offline-Bundesländer-Übersicht (bereits enthalten, kein Download nötig)
-- GPS-Punkt und Anzeige der Koordinaten mit Gerätestandortberechtigung
-- 10 Unterschlupf-Varianten mit Materiallisten und Einzelschritten
-- Reh, Wildschwein, Hase und jagdbare Wildvögel: Hygiene, Verarbeitung, Fleischteile und Zubereitung
-- 8 weitere KI-Motivbilder (insgesamt 39), alle bisherigen Daten, 13 Kapitel, 60 Pflanzen und 11 Knoten erhalten
-- Version 1.5.1: Startlinks und Umlaute repariert, Updatesuche und neuer Service-Worker-Cache
+UPDATE: ZIP entpacken, darin enthaltene Dateien direkt im GitHub-Repository-Hauptverzeichnis hochladen und existierende Dateien ersetzen; anschließend Commit changes. Manuelle Updatesuche unter »Mehr«. Installierte iPhone-App in Safari neu öffnen, ggf. Cache aktualisieren.
 
-WICHTIG: Die eingebaute Karte hat keine Straßen, Wege, Höhenlinien oder Satellitenbilder.
-Sie ist keine vollständige topografische Offline-Karte und darf nicht zur Notfallnavigation eingesetzt werden.
-GPS benötigt Standortberechtigung; ein Fix ist nicht garantiert.
+Bestehende Funktionen: alle Bundesländer, 13 Kapitel, 60 Pflanzenprofile, Knotenschule, Unterschlupf-Anleitungen, Wildhygiene, Fotos, Notfall, Merkliste, Backups, Checklisten.
 
-Jagdrechte und Vorschriften je Bundesland prüfen, keine Nutzung von krankem oder gefundenem Wild.
-Wildschwein nur nach verpflichtender amtlicher Trichinenfreigabe; Hasenpest- und Vogelgripperisiko beachten.
-KI-Fotos sind Symbol- bzw. illustrative Bilder, keine anatomisch validierten Arbeitsfotos.
+KOMPATIBILITÄT: Orts- und Kontaktinformationen werden nur lokal gespeichert. Karten-GPS wird nicht hochgeladen. Keine Tracking-SDKs und keine kostenpflichtigen Kartenanbieter.
 
-Karten-Grenzgeometrien: stark vereinfacht nach github.com/isellsoap/deutschlandGeoJSON (Public Domain / Unlicense).
+TECHNISCHE GRENZEN: Kartendienste der BKG/EOX sind externe Dienste; deren Verfügbarkeit und Funktionsweise konnte in dieser Entwicklungsumgebung nicht live auf dem iPhone geprüft werden. Karten sind für Outdoor-Orientierung hilfreich, ersetzen aber keine aktuellen amtlichen Gefahren-/Sperrhinweise oder eine geprüfte Rettungsnavigation. Wanderwege und Höhenlinien können je nach Maßstab und Gebiet unterschiedlich dargestellt sein.
