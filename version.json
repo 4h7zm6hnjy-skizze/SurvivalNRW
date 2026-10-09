@@ -1,13 +1,10 @@
 {
-  "version": "1.8.3",
+  "version": "1.8.4",
   "released": "2026-10-09",
   "notes": [
-    "28 Arten-Steckbriefe für Fische und 9 für Flusskrebse/Krabben im neuen Fachbereich Jagd & Wild",
-    "NRW-Mindestmaße, Schonzeiten und Schutzstatus mit Rechtsstand 03.07.2026",
-    "Artensuche, Filter und unverbindliche Mindestmaß-Rechenhilfe",
-    "Giftige Bestandteile bei Aalblut und Barbenrogen sowie Verletzungsrisiken hervorgehoben",
-    "Quellenangaben, hygienische Hinweise und Schutz der heimischen Krebse",
-    "Bisherige Funktionen und lokale Daten bleiben erhalten"
+    "Fische & Flusskrebse: KI-Lehrbilder für wichtige NRW-Arten eingebunden, übrige Arten mit Lehrskizzen als Fallback",
+    "Zu allen Fisch-, Krebs- und Krabbenarten wurden Zubereitungshinweise ergänzt",
+    "Rechts- und Hygieniewarnungen bleiben sichtbar: Mindestmaß ist keine Verzehrfreigabe, geschützte Arten bleiben ohne Entnahme"
   ],
   "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
   "limit": "Gilt nur für NRW; lokale Gewässerordnungen und aktuelle Rechtslage vor jedem Fang prüfen. Lehrskizzen keine Artenfotos. Keine automatische Fangfreigabe."

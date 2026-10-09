@@ -1,19 +1,6 @@
-SURVIVAL DEUTSCHLAND v1.8.3 – FISCHE & FLUSSKREBSE NRW
+Survival Deutschland v1.8.4
 
-Inhalte: 29 Fischarten und 9 Krebs-/Krabbenarten.
-Felder: Artbezeichnung, Latein, Merkmale, Lebensraum, Landesmindestmaß/Schutzstatus,
-Schonzeit, Warnung (Stacheln, Zähne, Rogen, Blut, Scheren), Verzehrhinweise.
-
-Quellen: https://recht.nrw.de/lrgv/rechtsverordnung/03072026-landesfischereiverordnung-lfischvo/
-         https://www.edelkrebsprojektnrw.de/flusskrebse/flusskrebse.php
-         https://www.bfr.bund.de/fragen-und-antworten/thema/lebensmittelinfektionen-im-privathaushalt-quellen-erkennen-risiken-vermeiden/
-
-WICHTIG: Rechtliche Mindestmaße sind keine Verzehrfreigabe. Die Angaben gelten nur
-für Nordrhein-Westfalen und ersetzen keine aktuellen örtlichen Gewässerregeln.
-Artendiagramme sind Lehrskizzen, keine nachweislich artgetreuen Abbildungen.
-Die eigene Größe-Eingabe prüft nur das landesgesetzliche Maß, nicht die Fangberechtigung.
-Krebsarten außerhalb der zwei geschützten heimischen Arten sind nicht automatisch
-zur Entnahme freigegeben. Nichteinheimische Arten nicht eigenmächtig umsetzen.
-
-Hinweis zur Prüfung: Syntax, DOM-Navigation und Filter werden automatisiert geprüft.
-Reale iPhone-Tests sowie aktuelle Rechtsauskunft für einzelne Gewässer ausstehend.
+Aktualisiert: Bereich Fische & Flusskrebse in NRW.
+- Zubereitungshinweise für alle Arten ergänzt.
+- Fotorealistische KI-Lehrbilder für die wichtigsten hinterlegten Fisch- und Krebsarten eingebunden; übrige Arten behalten die Lehrskizze als Fallback.
+Hinweis: Lehrbilder ersetzen keine sichere Artbestimmung; rechtliche Zulässigkeit und Gewässerbelastung müssen immer zusätzlich geprüft werden.
