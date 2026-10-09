@@ -1,11 +1,11 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "released": "2026-10-09",
   "notes": [
-    "Bundesland-Auswahl für 16 Bundesländer mit regionalen Hinweisen",
-    "11 Knotenanleitungen mit schrittweisem Lernmodus und Kontrollhinweisen",
-    "6 neue fotorealistische KI-Knotenbilder",
-    "Alle bisherigen Kapitel, Pflanzenprofile und Bilder bleiben erhalten",
-    "Offline-Cache und Update-Suche erweitert"
+    "Sofort nutzbare, vereinfachte Offline-Deutschlandkarte mit GPS-Punkt",
+    "Bundesländer direkt in der Navigation sichtbar",
+    "9 Unterschlupf-Varianten mit bebilderten Schritten",
+    "Wildbret-Anleitungen für Reh, Wildschwein, Hase und Federwild",
+    "Bisherige Inhalte und Bilder bleiben erhalten"
   ]
 }

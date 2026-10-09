@@ -14,20 +14,25 @@
   <script defer src="v13_gpx.js"></script>
   <script defer src="regions_data.js"></script>
   <script defer src="knoten_data.js"></script>
+  <script defer src="bundeslaender_karte.js"></script>
+  <script defer src="unterkunft_150.js"></script>
+  <script defer src="wild_150.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
  <div class="app-shell">
   <header class="topbar">
-   <a href="#/" class="brand" aria-label="Survival Deutschland Startseite"><span class="brand-mark" aria-hidden="true">▲</span><span class="brand-lines"><b>SURVIVAL<span class="brand-hl">DE</span></b><small>FIELD GUIDE · VERSION 1.4.0</small></span></a>
-   <div class="topbar-actions"><a href="#/mehr" class="version-top" aria-label="Version 1.4.0 und Updates prüfen">v1.4.0</a><span id="netstatus" class="status-pill">Survival DE</span><a class="emergency-top" href="#/notfall" aria-label="Notfall-Seite">SOS</a></div>
+   <a href="#/" class="brand" aria-label="Survival Deutschland Startseite"><span class="brand-mark" aria-hidden="true">▲</span><span class="brand-lines"><b>SURVIVAL<span class="brand-hl">DE</span></b><small>FIELD GUIDE · VERSION 1.5.0</small></span></a>
+   <div class="topbar-actions"><a class="region-top" id="active-region-top" href="#/bundeslaender" aria-label="Bundesland wechseln">NRW</a><a href="#/mehr" class="version-top" aria-label="Version 1.5.0 und Updates prüfen">v1.5.0</a><span id="netstatus" class="status-pill">Survival DE</span><a class="emergency-top" href="#/notfall" aria-label="Notfall-Seite">SOS</a></div>
   </header>
   <main id="view" class="view" aria-live="polite"></main>
   <nav class="bottom-nav" aria-label="Hauptnavigation">
     <a href="#/" data-nav="home"><span class="nav-icon" data-icon="home"></span><span>Start</span></a>
+    <a href="#/bundeslaender" data-nav="bundeslaender"><span class="nav-icon" data-icon="location"></span><span>Länder</span></a>
+    <a href="#/karte" data-nav="karte"><span class="nav-icon" data-icon="route"></span><span>Karte</span></a>
     <a href="#/wissen" data-nav="wissen"><span class="nav-icon" data-icon="book"></span><span>Wissen</span></a>
     <a href="#/pflanzen" data-nav="pflanzen"><span class="nav-icon" data-icon="leaf"></span><span>Pflanzen</span></a>
-    <a href="#/check" data-nav="check"><span class="nav-icon" data-icon="check"></span><span>Listen</span></a>
+    
     <a href="#/mehr" data-nav="mehr"><span class="nav-icon" data-icon="menu"></span><span>Mehr</span></a>
   </nav>
  </div>
