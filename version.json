@@ -1,11 +1,14 @@
 {
-  "version": "1.8.2",
+  "version": "1.8.3",
   "released": "2026-10-09",
   "notes": [
-    "Tierspuren & Wildtiere enthält nun Spur-Bilder zu allen 30 Tierprofilen",
-    "Auch die Seite Wildtiere & Fährten zeigt zu jedem Tier eine schematische Spur-Darstellung",
-    "Spur-Bilder sind als Lehrbilder gekennzeichnet und ersetzen keine artsichere Feldbestimmung"
+    "28 Arten-Steckbriefe für Fische und 9 für Flusskrebse/Krabben im neuen Fachbereich Jagd & Wild",
+    "NRW-Mindestmaße, Schonzeiten und Schutzstatus mit Rechtsstand 03.07.2026",
+    "Artensuche, Filter und unverbindliche Mindestmaß-Rechenhilfe",
+    "Giftige Bestandteile bei Aalblut und Barbenrogen sowie Verletzungsrisiken hervorgehoben",
+    "Quellenangaben, hygienische Hinweise und Schutz der heimischen Krebse",
+    "Bisherige Funktionen und lokale Daten bleiben erhalten"
   ],
   "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
-  "limit": "Die Seilschemata sind illustrative Näherungen, keine unabhängig geprüften Knotenzeichnungen. Nicht für Personen- oder Lastsicherung verwenden."
+  "limit": "Gilt nur für NRW; lokale Gewässerordnungen und aktuelle Rechtslage vor jedem Fang prüfen. Lehrskizzen keine Artenfotos. Keine automatische Fangfreigabe."
 }
