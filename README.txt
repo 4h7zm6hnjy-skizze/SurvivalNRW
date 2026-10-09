@@ -1,39 +1,32 @@
-SURVIVAL NRW – Web-App 1.1.0
-==============================
+SURVIVAL NRW – Version 1.2.0
+================================
 
-Enthalten:
-- 13 Kapitel des NRW-Notfallhandbuchs
-- 9 Pflanzenprofile und 25 KI-generierte fotorealistische Abbildungen
-- Notfallmodus mit Notruf 112 und optionaler GPS-Standortanzeige
-- Volltextsuche, Filter, Merkliste, persönliche Notizen und Checklisten
-- Große Bildergalerie; alle Bilder lokal gespeichert
-- Keine Registrierung und keine externen Dienste
+Dieses Paket ist für das Repository:
+https://github.com/4h7zm6hnjy-skizze/SurvivalNRW
 
-APP IM BROWSER ÖFFNEN:
-Die App besteht aus index.html, styles.css, app.js, data.js, sw.js,
-manifest.webmanifest, Icons und dem Ordner assets. Alle Dateien müssen
-zusammen bleiben. Lade den Inhalt dieses ZIP-Archivs auf einen
-statischen Webserver (zum Beispiel GitHub Pages). Öffne anschließend
-index.html über HTTPS. Auf dem iPhone in Safari: Teilen > Zum
-Home-Bildschirm. Nach vollständigem Laden und erfolgreicher Cache-
-Installation ist die Web-App offline nutzbar.
+Neu:
+- Bildpfade auf das bereits hochgeladene Hauptverzeichnis korrigiert.
+- Gut sichtbare Versionsnummer v1.2.0 oben rechts und unter „Mehr“.
+- Schaltfläche „Auf Updates prüfen“ unter Mehr & Einstellungen.
+- version.json als Quelle für künftige veröffentlichte Versionsnummern.
+- Offline-Cache für alle 25 lokalen Bilder.
 
-OHNE WEBSERVER:
-Die separate Datei Survival_NRW_Offline.html enthält Bilder und Inhalte
-in einer einzigen Datei. Sie benötigt beim Öffnen keine Internetverbindung.
-Auf iPhones hängt die Unterstützung lokaler HTML-Dateien mit JavaScript
-von der verwendeten Dateien-/Browser-Ansicht ab. Alternativ die
-mehrteilige App auf einem HTTPS-Webserver öffnen.
+WICHTIG: Es handelt sich um eine statische GitHub-Pages-Web-App. Die
+Updateprüfung ist nur bei Online-Verbindung möglich. Der Button meldet
+eine neuere Version nur, wenn version.json auf dem Server eine höhere
+Versionsnummer enthält. Für künftige Releases Version in data.js,
+index.html, sw.js und version.json synchron aktualisieren.
 
-WICHTIGE HINWEISE:
-Die Bilder sind fotorealistische KI-Darstellungen, keine echten
-Belegfotos. Sie können anatomische, technische oder botanische Fehler
-enthalten. Wildpflanzen niemals allein anhand der KI-Bilder bestimmen.
-Improvisierte Wasserfilter desinfizieren nicht zuverlässig.
-Jagd, Fischerei und offenes Feuer unterliegen gesetzlichen Grenzen.
-Bei echten Notfällen 112 anrufen und behördliche Hinweise beachten.
-Einige Informationen beruhen auf dem bestehenden privaten Handbuch,
-dessen Aktualität und fachliche Richtigkeit nicht vollständig neu
-geprüft wurde. Keine medizinische, botanische oder juristische Beratung.
+GitHub-Upload: Die Inhalte des ZIP-Archivs direkt in den Stammordner des
+Branch main hochladen, nicht den ZIP selbst und keinen zusätzlichen
+Unterordner. Bestehende gleichnamige Dateien überschreiben und
+„Commit changes“ bestätigen. Danach unter Settings > Pages prüfen,
+dass main und /(root) als Quelle gewählt sind.
 
-Version 1.1.0 | 9. Oktober 2026
+Startseite der App nach erfolgreicher Veröffentlichung:
+https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/
+
+Erst nach dem vollständigen Laden die Web-App zum iPhone Home-Bildschirm
+hinzufügen. KI-Pflanzenbilder sind keine verlässliche Bestimmungsgrundlage.
+
+Version 1.2.0 | 9. Oktober 2026

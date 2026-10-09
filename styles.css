@@ -26,3 +26,19 @@
 .dialog-bar,.dialog-footer{display:flex;justify-content:space-between;align-items:center;gap:12px}.dialog-bar{margin:0 0 10px}.dialog-count{color:#c5d8b5;font-size:12px}.dialog-footer{margin:12px 0 3px}.dialog-title{text-align:center;font-size:14px}.image-dialog p{text-align:center;font-size:11px;color:var(--muted);margin:8px 0 0}
 @media(max-width:960px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:610px){.gallery-card>img{height:145px}.gallery-grid{gap:9px}.gallery-card>span{padding:10px}.gallery-card strong{font-size:12px}.gallery-banner>img{width:94px;height:90px}.gallery-banner strong{font-size:12px}.gallery-banner small{font-size:10px}.image-dialog{width:96vw;padding:8px}}
+
+/* Survival NRW 1.2.0 – visible release number and manual update check */
+.version-top{flex:0 0 auto;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.15px;color:#d5eca2;background:#213829;border:1px solid #607d5a;padding:8px 10px;border-radius:11px;white-space:nowrap}
+.version-top:focus-visible,.update-actions button:focus-visible{outline:3px solid #d6f2ae;outline-offset:3px}
+.release-panel{background:linear-gradient(145deg,#1b3328,#12261e);border:1px solid #526a53;border-radius:19px;margin:22px 0 16px;padding:18px}
+.release-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.release-head h2{margin:4px 0 8px;font-size:23px}
+.release-chip{color:#daf0af;background:#294333;border:1px solid #678369;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}
+.release-panel>p{color:#baccba;font-size:13px;line-height:1.6;margin:6px 0 13px}
+.update-result{padding:13px 14px;border-radius:12px;border:1px solid #526a53;background:#10251b;color:#d9e8ce;font-size:13px;line-height:1.55;margin-bottom:13px}
+.update-result[data-kind="warning"]{border-color:#9a8544;color:#f4e1a8}
+.update-result[data-kind="available"]{border-color:#9cbc66;color:#e1f5c4}
+.update-result[data-kind="success"]{border-color:#568570;color:#c8f0db}
+.update-actions{display:flex;gap:10px;flex-wrap:wrap}
+.update-actions .btn[hidden]{display:none!important}
+@media(max-width:610px){.topbar-actions{gap:8px}.version-top{font-size:11px;padding:7px 8px}.brand-lines small{font-size:8px}.release-panel{padding:14px}.release-head h2{font-size:21px}.update-actions .btn{flex:1 1 auto}}

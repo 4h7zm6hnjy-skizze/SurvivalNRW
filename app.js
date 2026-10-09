@@ -34,7 +34,7 @@ const ICONS={
 };
 function icon(n,klass=''){return `<span class="icon ${klass}" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONS[n]||ICONS.info}</svg></span>`}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function imgsrc(id){const i=window.SURVIVAL_INLINE_IMAGES;return i&&i[id]?i[id]:`assets/${id}.webp`}
+function imgsrc(id){const i=window.SURVIVAL_INLINE_IMAGES;return i&&i[id]?i[id]:`./${encodeURIComponent((id+'.webp').normalize('NFD'))}`}
 function pic(id,alt,clazz=''){return `<img class="${clazz}" src="${imgsrc(id)}" alt="${esc(alt||'KI-generierte fotorealistische Szene')}" loading="lazy">`}
 const store={
  get(k,def){try{const v=localStorage.getItem('survival-nrw:'+k);return v===null?def:JSON.parse(v)}catch(e){return def}},
@@ -164,8 +164,63 @@ function notfall(){return `<div class="emergency-page"><a href="#/" class="back"
  <div class="section-title"><h2>Deinen Standort ermitteln</h2></div><p class="intro">GPS-Koordinaten können der Rettungsleitstelle helfen. Die Standortermittlung hängt von Gerät und Berechtigungen ab und kann ungenau sein.</p><button class="btn secondary" data-action="gps">${icon('location')} Standort bestimmen</button><div id="gps-result" class="location-readout" aria-live="polite">Noch kein Standort ermittelt.</div><button data-action="copy-gps" id="copy-gps" class="btn small outline" disabled>Koordinaten kopieren</button>
  <div class="section-title"><h2>Schnellzugriff</h2></div><div class="small-links"><a class="quick-link" href="#/wissen/11">${icon('plus')}<span><strong>Erste Hilfe</strong><small>Blutung, Wunde, Kälte</small></span></a><a class="quick-link" href="#/wissen/2">${icon('route')}<span><strong>Evakuierung</strong><small>Verlassen oder bleiben?</small></span></a><a class="quick-link" href="#/wissen/7">${icon('droplets')}<span><strong>Wasser</strong><small>Trinkwasser sicher machen</small></span></a><a class="quick-link" href="#/check">${icon('clipboard')}<span><strong>10-Minuten-Check</strong><small>Prioritäten abhaken</small></span></a></div>
  <div class="notice danger">Bei starker Blutung direkten Druck auf die Blutungsstelle ausüben und den Notruf kontaktieren. Bei Atemnot, Bewusstlosigkeit oder anderen akuten Beschwerden unverzüglich medizinische Hilfe holen.</div></div>`}
+
+// A published release is advertised through version.json in the same Pages directory.
+// This does not assume any update exists; check is always triggered by the user.
+let publishedUpdate=null;
+function versionCompare(a,b){
+ const x=String(a).split('.').map(Number),y=String(b).split('.').map(Number);
+ for(let k=0;k<3;k++){if(x[k]!==y[k])return x[k]>y[k]?1:-1}
+ return 0;
+}
+function releasePanel(){return `<section class="release-panel" aria-labelledby="release-title">
+ <div class="release-head"><div><div class="eyebrow">Aktuelle Installation</div><h2 id="release-title">Version ${esc(D.version)}</h2></div><span class="release-chip">v${esc(D.version)}</span></div>
+ <p>Prüft die auf GitHub Pages veröffentlichte Versionsdatei. Für die Prüfung wird eine Internetverbindung benötigt.</p>
+ <div id="update-result" class="update-result" role="status" aria-live="polite">Noch nicht geprüft. Tippe auf „Auf Updates prüfen“.</div>
+ <div class="update-actions"><button type="button" class="btn" data-action="check-version">${icon('refresh','sm')} Auf Updates prüfen</button><button id="install-update" type="button" class="btn secondary" data-action="install-version" hidden>Neue Version laden</button></div>
+ </section>`}
+function setUpdateResult(message,kind='neutral'){
+ const el=document.getElementById('update-result');if(!el)return;
+ el.textContent=message;el.dataset.kind=kind;
+}
+async function checkPublishedVersion(button){
+ if(button){button.disabled=true;button.setAttribute('aria-busy','true')}
+ const install=document.getElementById('install-update');if(install)install.hidden=true;
+ publishedUpdate=null;
+ setUpdateResult('Prüfe veröffentlichte Version …');
+ try{
+  if(location.protocol==='file:'){setUpdateResult('Bei einer lokalen HTML-Datei ist keine Online-Updateprüfung möglich. Öffne die GitHub-Pages-Adresse.','warning');return}
+  if(!navigator.onLine){setUpdateResult('Keine Internetverbindung. Versionsprüfung derzeit nicht möglich.','warning');return}
+  const endpoint=new URL('version.json',document.baseURI);
+  endpoint.searchParams.set('check',String(Date.now()));
+  const response=await fetch(endpoint.toString(),{cache:'no-store',headers:{'Accept':'application/json'}});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const release=await response.json();
+  if(!release || !/^\d+\.\d+\.\d+$/.test(String(release.version||'')))throw new Error('Versionsdatei ungültig');
+  const remote=release.version,cmp=versionCompare(remote,D.version);
+  if(cmp>0){publishedUpdate=release;setUpdateResult('Update verfügbar: v'+remote+' (installiert: v'+D.version+').','available');if(install){install.hidden=false;install.textContent='Update v'+remote+' laden'}}
+  else if(cmp===0){setUpdateResult('Aktuell: v'+D.version+'. Auf der veröffentlichten Website ist keine neuere Version hinterlegt.','success')}
+  else{setUpdateResult('Die Website meldet v'+remote+', installiert ist v'+D.version+'. Die Veröffentlichung läuft möglicherweise noch.','warning')}
+ }catch(e){setUpdateResult('Updateprüfung fehlgeschlagen: '+(e?.message||'Unbekannter Fehler')+'. Bitte Verbindung und version.json prüfen.','warning')}
+ finally{if(button){button.disabled=false;button.removeAttribute('aria-busy')}}
+}
+async function installPublishedVersion(button){
+ if(!publishedUpdate)return;
+ if(button)button.disabled=true;
+ setUpdateResult('Aktualisiere App-Cache und lade die neue Version …');
+ try{
+  if('serviceWorker' in navigator){
+   const registration=await navigator.serviceWorker.getRegistration();
+   if(registration){await registration.update();if(registration.waiting)registration.waiting.postMessage({type:'SKIP_WAITING'})}
+  }
+  const u=new URL(location.href);u.searchParams.set('update',String(Date.now()));
+  location.replace(u.toString());
+ }catch(e){setUpdateResult('Aktualisierung konnte nicht gestartet werden: '+(e?.message||'Fehler')+'. Seite neu laden.','warning');if(button)button.disabled=false}
+}
+
 function mehr(){return `${pageTitle('Survival NRW','Mehr & Einstellungen','Lokal gespeicherte Inhalte und Hinweise zum Handbuch.')}
  <div class="list-links"><a href="#/merkliste">${icon('star')} Merkliste ansehen →</a><a href="#/suche">${icon('search')} Handbuch durchsuchen →</a><a href="#/bilder">${icon('leaf')} Alle 25 Bilder →</a><a href="#/quellen">${icon('book')} Quellen und Grenzen →</a><a href="#/notfall">${icon('plus')} Notfallmodus →</a></div>
+ ${releasePanel()}
  <div class="section-title"><h2>Über diese App</h2></div><div class="notice"><strong>Survival NRW · Version ${esc(D.version)}</strong><p>Für Smartphone, Tablet und PC. Enthält die Inhalte des NRW-Survival-Handbuchs und 25 lokal gespeicherte fotorealistische KI-Bilder. Kein Konto nötig, keine Analytics und keine externen Schrift- oder Bilddienste.</p><p>Erstellt für privaten Gebrauch. Die App ist kein Ersatz für eine fachliche Erste-Hilfe-Ausbildung.</p></div>
  <div class="section-title"><h2>Offline verwenden</h2></div><div class="notice"><strong>Web-App installieren</strong><p>Nach Veröffentlichung unter HTTPS in Safari auf dem iPhone öffnen, dann über „Teilen“ → „Zum Home-Bildschirm“ hinzufügen. Bereits geladene App-Inhalte können durch den Service Worker offline verfügbar bleiben. Die einzelne HTML-Datei funktioniert ohne Internet, sofern sie lokal geöffnet werden kann.</p></div>
  <p class="footer-note">Fotos: KI-generierte Rekonstruktionen, keine geprüften Originalaufnahmen. Alle Pflanzen vor einer Nutzung unabhängig verifizieren. Keine Garantie für Vollständigkeit, Aktualität oder medizinische Eignung.</p>`}
@@ -197,6 +252,8 @@ function initialize(){for(const s of document.querySelectorAll('.nav-icon')){s.i
  document.addEventListener('change',e=>{if(e.target.matches('[data-check]'))checkUpdate(e.target.dataset.check)});
  document.addEventListener('click',async e=>{
  const btn=e.target.closest('[data-action]');if(!btn)return;const action=btn.dataset.action;
+ if(action==='check-version'){await checkPublishedVersion(btn);return}
+ if(action==='install-version'){await installPublishedVersion(btn);return}
  if(action==='scroll-to'){document.getElementById(btn.dataset.anchor)?.scrollIntoView({behavior:'smooth',block:'start'});}
  if(action==='scroll-section'){const target=document.getElementById(btn.dataset.id);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}
  if(action==='gallery-filter'){for(const b of document.querySelectorAll('#gallery-filters .chip'))b.classList.toggle('active',b===btn);updateGallery()}
@@ -218,7 +275,7 @@ function initialize(){for(const s of document.querySelectorAll('.nav-icon')){s.i
  });
  document.addEventListener('keydown',e=>{const d=document.getElementById('gallery-dialog');if(!d?.open)return;if(e.key==='ArrowLeft')moveGallery(-1);if(e.key==='ArrowRight')moveGallery(1)});
  window.addEventListener('hashchange',render);render();
- if('serviceWorker'in navigator&&location.protocol.startsWith('http')){navigator.serviceWorker.register('sw.js').then(()=>{let s=document.getElementById('netstatus');if(s)s.textContent='Offline gespeichert'}).catch(()=>{let s=document.getElementById('netstatus');if(s)s.textContent='Online geöffnet'})} else {const s=document.getElementById('netstatus');if(s)s.textContent=location.protocol==='file:'?'Lokale Datei':'Online geöffnet'}
+ if('serviceWorker'in navigator&&location.protocol.startsWith('http')){navigator.serviceWorker.register('sw.js').then(async()=>{const s=document.getElementById('netstatus');if(s)s.textContent='Offline-Cache wird vorbereitet';await navigator.serviceWorker.ready;const keys=await caches.keys();if(s)s.textContent=keys.includes('survival-nrw-v'+D.version)?'Offline bereit':'Online geöffnet'}).catch(()=>{let s=document.getElementById('netstatus');if(s)s.textContent='Online geöffnet'})} else {const s=document.getElementById('netstatus');if(s)s.textContent=location.protocol==='file:'?'Lokale Datei':'Online geöffnet'}
  window.addEventListener('offline',()=>{let s=document.getElementById('netstatus');if(s)s.textContent='Kein Netz'});
  window.addEventListener('online',()=>{let s=document.getElementById('netstatus');if(s)s.textContent='Online / Cache'});
 }

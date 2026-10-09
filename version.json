@@ -1,0 +1,10 @@
+{
+  "version": "1.2.0",
+  "released": "2026-10-09",
+  "notes": [
+    "Bilddateien aus dem Repository-Hauptverzeichnis laden",
+    "Versionsanzeige oben und unter Mehr",
+    "Manuelle Update-Suche über version.json",
+    "Offline-Cache mit allen 25 Bildern erneuert"
+  ]
+}
