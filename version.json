@@ -1,12 +1,10 @@
 {
-  "version": "1.7.2",
+  "version": "1.7.3",
   "released": "2026-10-09",
   "notes": [
-    "Globale Suche umfasst nun Feuer-, Unterschlupf-, Knoten- und Wild-Detailanleitungen",
-    "Backup und Wiederherstellung berücksichtigen auch die neuen lokalen GPS-Wegpunkte",
-    "Nicht nutzbare 10-km-Download-Auswahl entfernt; Topografie und Satellit für 6 km bleiben wählbar",
-    "Offline-Dateiprüfung verwendet den richtigen Versions-Cache",
-    "Vorhandene Pflanzen-/Feuer-Bildkorrekturen und persönliche Daten bleiben erhalten"
+    "Alle bislang fehlenden 51 Pflanzenprofile haben nun integrierte KI-Lehrbilder",
+    "Pflanzenkarten sind weiterhin klar als KI-Lehrbilder gekennzeichnet und nicht als botanisch verifizierte Bestimmungsfotos",
+    "Vorhandene 9 Pflanzenbilder, Feuerzeichnungen, Suche, Wegpunkte und 6-km-Kartenfunktion bleiben erhalten"
   ],
-  "limit": "Echte iPhone-GPS-, Kartendienst- und Flugmodusprüfungen weiterhin erforderlich"
+  "limit": "KI-Lehrbilder ersetzen keine sichere Bestimmung im Feld; für Sammeln und Verzehr stets zusätzlich prüfen"
 }
