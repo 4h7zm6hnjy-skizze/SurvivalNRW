@@ -1,30 +1,43 @@
-SURVIVAL DEUTSCHLAND 1.7.1 – QUALITÄTSREPARATUR
+SURVIVAL DEUTSCHLAND – FEHLERPRÜFUNG UND KORREKTUR 1.7.2
+Stand: 09.10.2026
 
-Ausgangslage: 60 Pflanzenprofile, 9 KI-Illustrationen, 51 Profile ohne Artenfoto. Keines botanisch begutachtet.
+NACHGEWIESENE PROBLEME IN 1.7.1
+1. Die globale Suche ignorierte neue v1.7-Feuer-, Unterschlupf-, Knoten- und Wild-Anleitungen. Test: „Raketenofen“ = keine Treffer trotz vorhandener Seite.
+2. Die JSON-Datensicherung erfasste ausschließlich Schlüssel mit survival-nrw:, nicht die neuen Wegpunkte survival-de-waypoints-v17.
+3. Die Auswahl 10 km Offline-Download erzeugte in NRW auf den vorgegebenen Stufen ca. 1.049 Kacheln, die Code-Grenze liegt aber bei 600. Die 6-km-Auswahl braucht ungefähr 420 Kacheln.
+4. Die Offline-Prüfung legte Dateien teilweise in einem anderen Cache-Namen als der installierende Service Worker ab.
+5. Die Übersicht „39 KI-Bilder“ war trotz 49 Galerieeinträgen missverständlich.
 
-UMGESETZT
-- 60 Pflanzenkarten zeigen einen expliziten und unterscheidbaren Medienstatus. Fehlende Artenbilder zeigen eine individuell beschriftete Text-Lehrkarte, nie ein Foto einer anderen Art.
-- Detailseiten fehlender Pflanzen haben identische Lehrkarten. Alte KI-Pflanzenmotive bleiben als nicht zur Artbestimmung geeignete Illustrationen markiert.
-- Alle 13 Feuer- und Wärmelektionen besitzen individuelle schematische Titelillustrationen. Falsche Wiederverwendung von Lager-, Koch- und Erste-Hilfe-Fotos entfällt.
-- Unbegründete Pfeile über nicht verifizierten Schrittbildern entfernt.
-- Unicode-Normalisierung der eingebetteten Bildschlüssel korrigiert (z. B. Löwenzahn). Schematische Darstellungen als solche gekennzeichnet.
-- Versionsanzeige 1.7.1; Offline-Daten/Favoriten ohne gezielte Löschung.
+BEHOBEN IN 1.7.2
+- Suchindex erweitert; v1.7-Inhalte werden auffindbar.
+- Backup von neuen Wegpunkten, Kartenpräferenzen sowie alten survival-nrw:-Einträgen; Wiederherstellung entsprechend.
+- Nicht funktionierende 10-km-Option entfernt, 6 km als Standard belassen.
+- Offline-Cache-Prüfung konsistent benannt.
+- Galerie-Beschreibung korrigiert; die Grafik-/Bildbestände nicht verändert.
+- Service-Worker-Cache und Version auf 1.7.2 gesetzt.
 
-OFFEN / NICHT BEHAUPTET
-- 51 botanisch geprüfte Fotos sind weiterhin nicht vorhanden. Keine KI-Pflanzenillustration ist fachlich zur Identifikation freigegeben.
-- Die 13 SVG-Schemata sind Eigenzeichnungen, keine zertifizierten Pläne; fachpraktische Validierung ausstehend.
-- Fachprüfung aller medizinischen und wildhygienischen Inhalte erfordert unabhängige Expertise.
-- Live-GPS, Browser-Offline-Karten und Speicherverfügbarkeit können nicht vollumfänglich in der Testumgebung überprüft werden.
-- Einzel-HTML offline: Handbuch und integrierte Bilder; Kartenkacheln erfordern vorherigen Download und geeigneten HTTPS-/PWA-Kontext.
+NICHT ABGESCHLOSSEN
+- 51 zusätzliche Pflanzen ohne botanisch geprüftes Artenfoto (bewusst Text-Lehrkarten), 9 alte KI-Illustrationen.
+- Ein iPhone-Flugmodustest ist notwendig; Karten-Server, Satellitenkacheln und deren Offline-Dauerhaftigkeit sind nicht live verifiziert.
+- KI-Fotografien/SVG-Feueraufbauten und medizinische/Jagdinhalte nicht unabhängig fachlich freigegeben.
+- GPS-Genauigkeit und Verhalten bei App im Hintergrund nur auf echtem Gerät testbar.
 
 UPLOAD
-Um GitHub Pages zu aktualisieren, Datei aus Ordner GitHub als index.html nach / hochladen, zusätzlich version.json und sw.js. Eine alleinige index 2.html wird NICHT als Startdatei verwendet.
+Enthaltene index.html, version.json und sw.js im Repository-Hauptverzeichnis ersetzen (nicht ZIP selbst hochladen), dann Commit changes.
+Persönliche lokale Daten nicht löschen; vor Upload gegebenenfalls Backup erstellen.
 
-LOKALE FUNKTIONSPRÜFUNGEN – 09.10.2026
-- Chromium / Inline-Dokument-Test: 141 Haupt- und Detailansichten erfolgreich, 0 JavaScript-Laufzeitfehler.
-- 60 Pflanzenkarten: 51 Text-Lehrkarten, 9 KI-Fotos; alle 9 Bilder im Chromium geladen.
-- 13 Feuerkarten: 13 unterschiedliche eingebettete SVG-Schemata, alle mit naturalWidth 800 geladen.
-- Direktaufruf Löwenzahn sowohl mit Umlaut als auch mit oe-Schreibweise repariert.
-- Pflanzenfilter: 60 gesamt, 16 als giftig gekennzeichnet; Suchfilter "Maiglöckchen" liefert 1 Treffer.
-- Knotenschule und Feuerlektionen: Weiter-Schaltflächen wechseln Schritt 1 zu Schritt 2.
-- Prüfgrenze: Kein echter Test auf iOS oder bei mobilen Kartendiensten im Flugmodus.
+DURCHGEFÜHRTE TESTS FÜR VERSION 1.7.2
+- 143 Start-, Haupt- und Detailansichten geladen; keine Fehlerseite, keine JavaScript-Laufzeitfehler im lokalen Chromium-Test.
+- Alle 13 Feuer-Lehrzeichnungen mit gültigen Bilddaten geladen.
+- Galerie: 49 von 49 Bilder nach vollständiger Bilddekodierung geladen (lazy loading berücksichtigt).
+- 60 Pflanzenprofile erreichbar; Pflanzenfilter: 16 Warn-/Giftprofile; Suchtest „Maiglöckchen“: 1 Treffer.
+- Alle 16 Bundesländer und 20 Knotendatensätze vorhanden.
+- Knotenschule und Feuertraining: Schritt 1 auf Schritt 2 gewechselt.
+- Globale Suche: „Raketenofen“, „Palstek“, „Wildschwein“, „Laubhütte“ gefunden.
+- JSON-Backup mit altem und neuem Wegpunkt-Schlüssel erfolgreich erstellt und aus der Testdatei wiederhergestellt.
+- Kartenoptionen 3 und 6 km, 6-km-Berechnung ca. 420 Rasterkacheln unter 600er-Grenze (keine Prüfung der externen Kartenserver).
+- Versionsdatei, Service Worker und JavaScript-Syntax überprüft; ZIP-Integrität geprüft.
+
+NICHT LIVE GEPRÜFT
+- GitHub Pages-Auslieferung der neuen 1.7.2 nach Upload, GPS-Ortung am echten iPhone, Berechtigungen, Speicherdruck auf iOS, echte externe Kartenkacheln sowie Flugmodus.
+- Fachliche Validierung der historischen KI-Pflanzenbilder und der Feuer-/Wild-Anleitungen.

@@ -1,11 +1,12 @@
 {
-  "version": "1.7.1",
+  "version": "1.7.2",
   "released": "2026-10-09",
   "notes": [
-    "60 Pflanzen-Medienstati vereinheitlicht; 51 fehlende Fotos durch beschriftete Lehrkarten dargestellt",
-    "13 Feuerlektionen: eigene schematische Aufbauzeichnungen",
-    "Dekorative, unzutreffende Hinweispfeile entfernt",
-    "Bisherige lokale Daten-/Favoritenschlüssel bleiben unverändert"
+    "Globale Suche umfasst nun Feuer-, Unterschlupf-, Knoten- und Wild-Detailanleitungen",
+    "Backup und Wiederherstellung berücksichtigen auch die neuen lokalen GPS-Wegpunkte",
+    "Nicht nutzbare 10-km-Download-Auswahl entfernt; Topografie und Satellit für 6 km bleiben wählbar",
+    "Offline-Dateiprüfung verwendet den richtigen Versions-Cache",
+    "Vorhandene Pflanzen-/Feuer-Bildkorrekturen und persönliche Daten bleiben erhalten"
   ],
-  "limit": "Botanische Verifikation und iPhone Offline Kartentest ausstehend"
+  "limit": "Echte iPhone-GPS-, Kartendienst- und Flugmodusprüfungen weiterhin erforderlich"
 }
