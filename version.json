@@ -1,14 +1,11 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "released": "2026-10-09",
   "notes": [
-    "8 bebilderte Praxisanleitungen, Materiallisten und Lernfortschritt",
-    "60 Pflanzenreferenzprofile, davon 51 neue Textprofile ohne Artenfoto",
-    "Giftpflanzen- und Wildtierbereich mit Sicherheitswarnungen",
-    "Notfallassistent mit situationsbezogenen Sofortmaßnahmen",
-    "Offline-Kartenbild-Import und eigene GPS-Wegpunkte",
-    "Materialrechner, Checklisten, Datensicherung und Offline-Speicherprüfung",
-    "Alle 25 bestehenden KI-Bilder und 13 Kapitel erhalten",
-    "Zusätzlicher GPX-/GeoJSON-Trackviewer ohne Kartenhintergrund"
+    "Bundesland-Auswahl für 16 Bundesländer mit regionalen Hinweisen",
+    "11 Knotenanleitungen mit schrittweisem Lernmodus und Kontrollhinweisen",
+    "6 neue fotorealistische KI-Knotenbilder",
+    "Alle bisherigen Kapitel, Pflanzenprofile und Bilder bleiben erhalten",
+    "Offline-Cache und Update-Suche erweitert"
   ]
 }

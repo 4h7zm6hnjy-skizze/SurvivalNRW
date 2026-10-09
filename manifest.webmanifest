@@ -1,8 +1,8 @@
 {
-  "name": "Survival NRW – Das Outdoor-Notfallhandbuch",
-  "short_name": "Survival NRW",
+  "name": "Survival Deutschland – Das Outdoor-Notfallhandbuch",
+  "short_name": "Survival DE",
   "id": "./",
-  "description": "Offline nutzbares NRW-Notfallhandbuch mit Bauanleitungen, Pflanzenkunde, Wildtiere, Orientierung und Checklisten.",
+  "description": "Survival-Handbuch für alle 16 Bundesländer mit Knotenschule, Pflanzenkunde und Offline-Inhalten.",
   "start_url": "./index.html#/",
   "scope": "./",
   "display": "standalone",

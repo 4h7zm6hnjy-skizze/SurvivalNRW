@@ -1,41 +1,22 @@
-SURVIVAL NRW · VERSION 1.3.0
-============================================================
+SURVIVAL DEUTSCHLAND · VERSION 1.4.0
+===================================
 
-ANLEITUNG ZUM UPDATE AUF GITHUB:
-1. Das ZIP-Paket ENTpacken, nicht die ZIP-Datei bei GitHub hochladen.
-2. Auf https://github.com/4h7zm6hnjy-skizze/SurvivalNRW den Branch main öffnen.
-3. Den Inhalt des Update-Pakets in den Stammordner des Repositorys hochladen.
-4. Bereits vorhandene gleichnamige Dateien müssen ersetzt werden. Keine verschachtelten Unterordner anlegen.
-5. Commit changes bestätigen und GitHub Pages etwas Zeit zum Veröffentlichen geben.
-6. App https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/ im Browser neu laden.
-7. Unter Mehr -> Auf Updates prüfen und unter Mehr -> Offline prüfen testen.
+NEU: 16 Bundesländer unter „Bundesländer“, dauerhaft gewählte Region und kontextbezogene Hinweise in den 13 Grundkapiteln. 11 Knotenanleitungen unter „Knotenschule“, jeweils Schritt für Schritt mit Knopfnavigation, Fehlern, Kontrollhinweisen und Lernfortschritt. 6 fotorealistische KI-Beispielfotos zur Knotenschule. Gesamt 31 Bilder in der Offline-Galerie.
 
-NEU:
-* 60 Pflanzen-Referenzsteckbriefe (9 vorhandene KI-Nachbildungen; 51 weitere ausdrücklich OHNE geprüftes Artenfoto)
-* 8 Praxisanleitungen mit Materiallisten und kontrollierbaren Schritten, Übungsnotizen und eigenen Fotos
-* 6 Wildtier-/Spurensteckbriefe, Wildbrethygiene-Hinweise
-* Situationsbezogener Notfallassistent mit sechs Szenarien und Notruf 112
-* Giftpflanzen- und Verwechslungsbereich
-* Benutzerimport von Kartenbildern, Wegpunkte und zusätzlicher GPX/GeoJSON-Trackviewer ohne Kartenhintergrund
-* Unverbindlicher Materialrechner (keine Statikprüfung)
-* Fortschrittsliste für Kapitel und Übungen
-* Checklisten für 24 Stunden, 72 Stunden, 7 Tage, Winter und Unwetter
-* Offline-Statusprüfung und lokale Nachspeicherung
-* JSON-Backup für Notizen, Checklisten, Favoriten, Wegpunkte und Lernstände
-* Versionsverlauf und Update-Suche
+BESTAND: 13 Kapitel, 60 Pflanzenprofile, 8 Praxisanleitungen, 6 Wildtierprofile, 6 Notfallszenarien, Materialrechner, eigene Notizen, lokale Fotos, Checklisten, Suchfunktion, GPX/GeoJSON-Viewer, SOS, Offline-Cache, Updateprüfung und Daten-Backup bleiben erhalten. Gespeicherte Daten der bisherigen App bleiben im Browser bei gleicher GitHub-Pages-Adresse erhalten.
 
-ERHALTEN:
-* Alle 13 Wissenskapitel aus der Vorversion
-* Alle 25 KI-generierten WebP-Bilder
-* Merkliste, Notizen, Galerie, Suche, SOS und GPS
+AUF GITHUB AKTUALISIEREN:
+1. Survival_Deutschland_v1_4_0_Update.zip herunterladen und entpacken. NICHT die ZIP direkt hochladen.
+2. https://github.com/4h7zm6hnjy-skizze/SurvivalNRW im Branch main öffnen.
+3. ALLE Dateien aus dem Paket in den Hauptordner des Repositorys hochladen (kein Unterordner). Gleichnamige Dateien überschreiben.
+4. Mit Commit changes bestätigen.
+5. https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/ im iPhone-Safari öffnen und neu laden.
+6. Versionsanzeige 1.4.0, Bundeslandwahl, Knotenkunde und Bilder prüfen. Unter Mehr offline speichern und Status prüfen.
 
-GRENZEN:
-Die App ist ein privates Nachschlagewerk. KI-Bilder sind keine geprüften Naturfotos und reichen nicht zur Pflanzenbestimmung.
-Pflanzen-Referenzsteckbriefe stellen keine Essbarkeits-, Sammel- oder medizinische Freigabe dar.
-Rechtslagen für Feuer, Jagd, Fischerei, Naturschutz sind orts- und situationsabhängig und müssen separat geprüft werden.
-Improvisierte Wasserfilter töten Keime nicht zuverlässig ab und entfernen viele Chemikalien nicht.
-Eine gezeichnete GPS-Linie ist keine Navigationskarte und kein Ersatz für verlässliche Offline-Karten.
-Ein eigenes Kartenbild und persönliche Übungsfotos werden separat in IndexedDB gespeichert und sind NICHT im JSON-Backup enthalten; einzeln sichern.
-Bei Notfällen Rettungsdienst 112 kontaktieren, behördlichen Informationen folgen.
+KNOTEN-SICHERHEIT: KI-Bilder sind dekorative Anschauungsbeispiele und nicht als zuverlässig korrekte Seilführung verifiziert. Anleitungen nur für unkritische Übungen und Lageraufgaben. Nicht für Klettern, Absturzsicherung, Personenrettung oder schwere Lasten.
 
-Stand: 9. Oktober 2026.
+REGIONALE GRENZEN: Regionalprofile sind landschaftliche und allgemeine Risikohinweise, keine verbindliche örtliche Wetterwarnung, keine vollständige Rechtsauskunft und keine Fundortbestätigung von Pflanzen. Die 13 Grundkapitel stammen inhaltlich aus dem vorherigen NRW-Handbuch und sind um regionale Hinweise ergänzt, nicht vollständig für jedes Land neu geschrieben. Der Pflanzenteil umfasst weiterhin 60 Arten- und Risiko-Profile; KI-Bilder nicht zur sicheren Bestimmung nutzen.
+
+Gesetzliche Basis für Waldzugang: https://www.gesetze-im-internet.de/bwaldg/__14.html und https://www.gesetze-im-internet.de/bnatschg_2009/__59.html. Landesrecht separat prüfen. Bei einem echten Notfall 112.
+
+Praktische Hinweise: iOS kann Browser-Speicher löschen; Backup lokal sichern, persönliche Fotos separat. GitHub Pages ist eine statische Website. Kein Backend, kein Login. Offline-Service-Worker nur nach Online-Laden über HTTPS und erfolgreicher Speicherung.
