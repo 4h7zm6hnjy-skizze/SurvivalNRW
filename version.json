@@ -1,11 +1,10 @@
 {
-  "version": "1.8.1",
+  "version": "1.8.2",
   "released": "2026-10-09",
   "notes": [
-    "Knotenschule: alle 20 Knoten und Bünde erhalten nummerierte Bildschritte mit gelben Führungspfeilen",
-    "Detailansichten: Großbild, antippbare Schrittgalerie und Zurück-/Weiter-Navigation",
-    "Doppelte IDs bei Ankerstich- und Sackstich-Varianten beseitigt",
-    "Vorherige Inhalte, GPS, Pflanzendarstellungen, Favoriten und lokale Notizen bleiben erhalten"
+    "Tierspuren & Wildtiere enthält nun Spur-Bilder zu allen 30 Tierprofilen",
+    "Auch die Seite Wildtiere & Fährten zeigt zu jedem Tier eine schematische Spur-Darstellung",
+    "Spur-Bilder sind als Lehrbilder gekennzeichnet und ersetzen keine artsichere Feldbestimmung"
   ],
   "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
   "limit": "Die Seilschemata sind illustrative Näherungen, keine unabhängig geprüften Knotenzeichnungen. Nicht für Personen- oder Lastsicherung verwenden."

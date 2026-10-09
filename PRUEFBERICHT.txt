@@ -1,7 +1,4 @@
-Survival Deutschland v1.8.1 — Knotenschule
+Survival Deutschland v1.8.2
 
-20 Knoten erhalten nummerierte schematische Schrittbilder mit Pfeilen.
-Die Bilder sind didaktische Illustrationen, keine zertifizierten Knotenfolgen.
-Doppelte Knotenkennungen behoben.
-
-Hinweis: Keine Personen-, Kletter- oder Schwerlastsicherung auf Grundlage dieser Zeichnungen.
+Ergänzung: Schematische Spur-Bilder für alle Tierprofile in Tierspuren & Wildtiere sowie auf der Seite Wildtiere & Fährten.
+Hinweis: Lehrbilder, keine artsicher verifizierten Trittsiegel-Fotos.
