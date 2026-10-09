@@ -1,6 +1,18 @@
-Survival Deutschland – v1.8.7
+SURVIVAL DEUTSCHLAND 1.8.8 – REPARATUR- UND OFFLINE-PRÜFUNG
 
-Der JS-Startfehler der 1.8.6 wurde behoben, indem neue Artenbilder innerhalb der vorgesehenen Bildtabelle ergänzt wurden.
-In der App stehen 29 Fischarten und 9 Krebs-/Krabbenarten mit KI-Lehrbildern. Vorhandene Zubereitungen und Warnungen bleiben erhalten.
-Prüfungen: JavaScript-Syntax; Bilder (Dekodierung); Browser Start/Navigation/Kartenlisten; ZIP-Konsistenz.
-KI-Lehrbilder sind nicht artsicher. Echtbetrieb am iPhone noch erforderlich.
+1. Basis: Original 1.8.7; bestehende Inhalte und gespeicherte Daten bleiben unverändert.
+2. Komplett-HTML: Handbuch, KI-Lehrbilder, Pflanzen, Fische, Flusskrebse, Knoten und Werkzeuge sind inline; kein externes CDN.
+3. Offline-Cache: sw.js speichert bei Erstinstallation index.html, version.json, sw.js für Offline-Neustart.
+4. Karten: online betrachtete Kartenkacheln werden zusätzlich lokal gespeichert (begrenzter Cache).
+5. Für planbare Offline-Touren: beide Kartenarten für 6 km Bereich vorab herunterladen, speichern prüfen und Flugmodus testen.
+6. Offline-Status zählt pro Kartenbereich beide Ebenen und zeigt fehlende Dateien an.
+7. Anzeigefehler: breites Textlayout auf iPhone, doppelte Routen und alte Direktlinks korrigiert.
+8. Startup-Fallback: statt leerer Fläche erscheinen Diagnose und Vorsichtsmaßnahmen; persönliche Daten bleiben erhalten.
+
+GRENZEN:
+- Offline-Karten funktionieren NUR für tatsächlich vorhandene Kacheln, Zoomstufen und Gebiete.
+- Gesamte Deutschland-Satellitenkarte NICHT offline enthalten. Kartenserver sind für Erstdownload nötig.
+- iPhone Safari kann Browser-Caches bei Speicherdruck entfernen; wiederkehrende Offline-Prüfung empfohlen.
+- Echter Flugmodus, GPS, iOS-Hintergrundtracking und Kartendienst-Abruf konnten nicht auf einem physischen Gerät getestet werden.
+- KI-Artenbilder sind keine botanischen/zoologischen Bestimmungsnachweise.
+- Gesetzliche Schonzeiten und Jagd-/Fischereibestimmungen ändern sich; offline gespeicherter Stand kann veralten.

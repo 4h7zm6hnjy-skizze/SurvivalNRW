@@ -1,21 +1,66 @@
-/* Survival Deutschland 1.8.7 — single-file app shell; gepruefte lokale App-Dateien. */
-const CACHE='survival-de-v1.8.7-single';
-const MAP_CACHE='survival-de-licensed-map-tiles-v1'; // Vorher gespeicherte Karten beibehalten
-const FILES=['./index.html','./version.json','./sw.js'];
-const TILE_HOSTS=['sgx.geodatenzentrum.de','e.tiles.maps.eox.at'];
-self.addEventListener('install', e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(FILES);await self.skipWaiting()})()));
-self.addEventListener('activate',e=>e.waitUntil((async()=>{const names=await caches.keys();await Promise.all(names.filter(n=>n.startsWith('survival-nrw-v')||n.startsWith('survival-de-v')).filter(n=>n!==CACHE).map(n=>caches.delete(n)));await self.clients.claim()})()));
-self.addEventListener('message',e=>{if(e.data?.type==='SKIP_WAITING')self.skipWaiting()});
-self.addEventListener('fetch',e=>{
- if(e.request.method!=='GET')return;
- const url=new URL(e.request.url);
- if(TILE_HOSTS.includes(url.hostname)){
-  e.respondWith((async()=>{const c=await caches.open(MAP_CACHE);const hit=await c.match(e.request);if(hit)return hit;return fetch(e.request)})());return;
- }
- if(url.origin!==self.location.origin)return;
- if(url.pathname.endsWith('/version.json')){e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match('./version.json')));return}
- if(e.request.mode==='navigate'){
-  e.respondWith(fetch(e.request,{cache:'no-store'}).then(r=>{if(r.ok){caches.open(CACHE).then(c=>c.put('./index.html',r.clone())).catch(()=>{})}return r}).catch(()=>caches.match('./index.html')));return;
- }
- e.respondWith(caches.match(e.request).then(hit=>hit||fetch(e.request)));
+/* Survival Deutschland 1.8.8: offline-first app shell and bounded caching of map tiles. */
+const CACHE='survival-de-v1.8.8-single';
+const MAP_CACHE='survival-de-licensed-map-tiles-v1'; // map tiles from prior releases remain usable
+const SHELL=['./index.html','./version.json','./sw.js'];
+const TILE_HOSTS=new Set(['sgx.geodatenzentrum.de','e.tiles.maps.eox.at']);
+const MAX_SAVED_VIEW_TILES=1500;
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+  const cache=await caches.open(CACHE);
+  await cache.addAll(SHELL);
+  await self.skipWaiting();
+})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{
+  const names=await caches.keys();
+  await Promise.all(names.filter(name=>/^(survival-nrw-v|survival-de-v)/.test(name)&&name!==CACHE).map(name=>caches.delete(name)));
+  await self.clients.claim();
+})()));
+self.addEventListener('message',event=>{if(event.data?.type==='SKIP_WAITING')self.skipWaiting()});
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET')return;
+  const url=new URL(event.request.url);
+  if(TILE_HOSTS.has(url.hostname)){
+    event.respondWith((async()=>{
+      const cache=await caches.open(MAP_CACHE);
+      const saved=await cache.match(event.request);
+      if(saved)return saved;
+      try{
+        const response=await fetch(event.request);
+        if(response&&(response.ok||response.type==='opaque')){
+          const copy=response.clone();
+          event.waitUntil((async()=>{
+            try{
+              await cache.put(event.request,copy);
+              const keys=await cache.keys();
+              if(keys.length>MAX_SAVED_VIEW_TILES){
+                const excess=keys.length-MAX_SAVED_VIEW_TILES;
+                for(const old of keys.slice(0,excess))await cache.delete(old);
+              }
+            }catch(err){} // offline storage can be disabled or full
+          })());
+        }
+        return response;
+      }catch(err){return new Response('',{status:503,statusText:'Kartenkachel offline nicht gespeichert'});}
+    })());
+    return;
+  }
+  if(url.origin!==self.location.origin)return;
+  if(url.pathname.endsWith('/version.json')){
+    event.respondWith(fetch(event.request,{cache:'no-store'}).catch(()=>caches.match('./version.json')));
+    return;
+  }
+  if(event.request.mode==='navigate'){
+    event.respondWith((async()=>{
+      try{
+        const response=await fetch(event.request,{cache:'no-store'});
+        if(response.ok){
+          event.waitUntil(caches.open(CACHE).then(cache=>cache.put('./index.html',response.clone())).catch(()=>{}));
+        }
+        return response;
+      }catch(err){
+        return await caches.match('./index.html')||new Response('Survival Deutschland: Offline-Daten fehlen. Einmal online öffnen.',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}});
+      }
+    })());
+    return;
+  }
+  event.respondWith(caches.match(event.request).then(hit=>hit||fetch(event.request)));
 });

@@ -1,11 +1,13 @@
 {
-  "version": "1.8.7",
+  "version": "1.8.8",
   "released": "2026-10-09",
   "notes": [
-    "Reparatur des JavaScript-Startfehlers in Version 1.8.6: Bilddaten korrekt in die bestehende Bildtabelle eingefügt",
-    "29 Fisch- und 9 Krebs-/Krabbenarten besitzen eingebettete fotorealistische KI-Lehrbilder",
-    "Bestehende Suchfunktionen, Zubereitung, Schutzstatus, Mindestmaße, Navigation und Speicherfunktionen bleiben erhalten"
+    "Vollständige Offline-Einzeldatei mit allen Lerninhalten, Bildern, Fischen, Krebsen, Pflanzen und Knoten erhalten",
+    "Offline-Prüfung zählt App-Dateien des aktuellen Caches sowie Topografie- und Satellitenkacheln des 6-km-Ausschnitts getrennt",
+    "Kartenmanager prüft das tatsächliche Vorhandensein von Kartenteilen für den gewählten 3- oder 6-km-Ausschnitt",
+    "Lademeldung bei JavaScript-Startfehlern statt dauerhaft schwarzer Seite",
+    "Mobile Darstellungs- und ältere Direktlink-Fehler korrigiert; Karten-Cache wird beim Kartengebrauch ergänzt"
   ],
-  "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
+  "limits": "Erster Aufruf mit Internet notwendig. Karten nur in explizit gespeicherten Bereichen und Zoomstufen offline. iOS kann Daten bei Speicherknappheit löschen. GPS/Flugmodus auf dem Gerät und externe Kartendienste nicht garantiert.",
   "limit": "KI-Lehrbilder ersetzen keine verifizierten Artenfotos oder sichere Artbestimmung. Reale iPhone- und Offline-Gerätetests ausstehend."
 }
