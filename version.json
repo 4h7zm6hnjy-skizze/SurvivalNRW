@@ -1,11 +1,11 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "released": "2026-10-09",
   "notes": [
-    "Modernisierte, kontrastreiche Mobilansicht",
-    "Echte TopPlusOpen-Karte mit GPS und manuellem Kartendownload",
-    "Sentinel-2 Satellitenebene (2016), offline ausgewählte Ausschnitte",
-    "Nur gebührenfreie offene Kartendaten mit sichtbaren Quellenhinweisen",
-    "Bestehende Inhalte und gespeicherte Daten bleiben erhalten"
+    "Einzeldatei mit allen Handbuchinhalten und 39 integrierten Bildern",
+    "Erweitert: 18 Unterschlupfarten, 20 Knoten und Bünde, 12 Feuerverfahren",
+    "60 Pflanzenprofile, regionale Hinweise für 16 Bundesländer",
+    "Offline-Karten als gesondert herunterzuladende Ausschnitte (6 km, Topografie und Satellit)",
+    "Korrigierter Startdateiname und Offline-Cache"
   ]
 }

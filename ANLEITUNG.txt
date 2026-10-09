@@ -1,0 +1,9 @@
+SURVIVAL DEUTSCHLAND 1.7.0 – GitHub-Korrektur
+
+1. ZIP entpacken.
+2. Die Dateien index.html, version.json und sw.js im GitHub-Repository SurvivalNRW im HAUPTVERZEICHNIS hochladen. Gleichnamige vorhandene Dateien ERSETZEN und Commit changes bestätigen.
+3. Die irrtuemlich angelegte Datei index 2.html kann nach erfolgreicher Verifizierung entfernt werden.
+4. App in Safari unter https://4h7zm6hnjy-skizze.github.io/SurvivalNRW/ öffnen. Versionsanzeige 1.7.0 prüfen, ggf. neu laden.
+5. Topografie und Satellit für 6-km-Ausschnitte vorher mit Internet herunterladen. Keine vorinstallierten Detailkarten.
+
+Hinweis: Browser-Speicher für bisher gespeicherte Karten und Favoriten beim Update nicht absichtlich leeren. Auf einem iPhone muss die Live-Funktion noch geprüft werden.
