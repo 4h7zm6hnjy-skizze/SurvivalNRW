@@ -1,0 +1,30 @@
+SURVIVAL DEUTSCHLAND 1.7.1 – QUALITÄTSREPARATUR
+
+Ausgangslage: 60 Pflanzenprofile, 9 KI-Illustrationen, 51 Profile ohne Artenfoto. Keines botanisch begutachtet.
+
+UMGESETZT
+- 60 Pflanzenkarten zeigen einen expliziten und unterscheidbaren Medienstatus. Fehlende Artenbilder zeigen eine individuell beschriftete Text-Lehrkarte, nie ein Foto einer anderen Art.
+- Detailseiten fehlender Pflanzen haben identische Lehrkarten. Alte KI-Pflanzenmotive bleiben als nicht zur Artbestimmung geeignete Illustrationen markiert.
+- Alle 13 Feuer- und Wärmelektionen besitzen individuelle schematische Titelillustrationen. Falsche Wiederverwendung von Lager-, Koch- und Erste-Hilfe-Fotos entfällt.
+- Unbegründete Pfeile über nicht verifizierten Schrittbildern entfernt.
+- Unicode-Normalisierung der eingebetteten Bildschlüssel korrigiert (z. B. Löwenzahn). Schematische Darstellungen als solche gekennzeichnet.
+- Versionsanzeige 1.7.1; Offline-Daten/Favoriten ohne gezielte Löschung.
+
+OFFEN / NICHT BEHAUPTET
+- 51 botanisch geprüfte Fotos sind weiterhin nicht vorhanden. Keine KI-Pflanzenillustration ist fachlich zur Identifikation freigegeben.
+- Die 13 SVG-Schemata sind Eigenzeichnungen, keine zertifizierten Pläne; fachpraktische Validierung ausstehend.
+- Fachprüfung aller medizinischen und wildhygienischen Inhalte erfordert unabhängige Expertise.
+- Live-GPS, Browser-Offline-Karten und Speicherverfügbarkeit können nicht vollumfänglich in der Testumgebung überprüft werden.
+- Einzel-HTML offline: Handbuch und integrierte Bilder; Kartenkacheln erfordern vorherigen Download und geeigneten HTTPS-/PWA-Kontext.
+
+UPLOAD
+Um GitHub Pages zu aktualisieren, Datei aus Ordner GitHub als index.html nach / hochladen, zusätzlich version.json und sw.js. Eine alleinige index 2.html wird NICHT als Startdatei verwendet.
+
+LOKALE FUNKTIONSPRÜFUNGEN – 09.10.2026
+- Chromium / Inline-Dokument-Test: 141 Haupt- und Detailansichten erfolgreich, 0 JavaScript-Laufzeitfehler.
+- 60 Pflanzenkarten: 51 Text-Lehrkarten, 9 KI-Fotos; alle 9 Bilder im Chromium geladen.
+- 13 Feuerkarten: 13 unterschiedliche eingebettete SVG-Schemata, alle mit naturalWidth 800 geladen.
+- Direktaufruf Löwenzahn sowohl mit Umlaut als auch mit oe-Schreibweise repariert.
+- Pflanzenfilter: 60 gesamt, 16 als giftig gekennzeichnet; Suchfilter "Maiglöckchen" liefert 1 Treffer.
+- Knotenschule und Feuerlektionen: Weiter-Schaltflächen wechseln Schritt 1 zu Schritt 2.
+- Prüfgrenze: Kein echter Test auf iOS oder bei mobilen Kartendiensten im Flugmodus.

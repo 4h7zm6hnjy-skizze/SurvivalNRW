@@ -1,11 +1,11 @@
 {
-  "version": "1.7.0",
+  "version": "1.7.1",
   "released": "2026-10-09",
   "notes": [
-    "Einzeldatei mit allen Handbuchinhalten und 39 integrierten Bildern",
-    "Erweitert: 18 Unterschlupfarten, 20 Knoten und Bünde, 12 Feuerverfahren",
-    "60 Pflanzenprofile, regionale Hinweise für 16 Bundesländer",
-    "Offline-Karten als gesondert herunterzuladende Ausschnitte (6 km, Topografie und Satellit)",
-    "Korrigierter Startdateiname und Offline-Cache"
-  ]
+    "60 Pflanzen-Medienstati vereinheitlicht; 51 fehlende Fotos durch beschriftete Lehrkarten dargestellt",
+    "13 Feuerlektionen: eigene schematische Aufbauzeichnungen",
+    "Dekorative, unzutreffende Hinweispfeile entfernt",
+    "Bisherige lokale Daten-/Favoritenschlüssel bleiben unverändert"
+  ],
+  "limit": "Botanische Verifikation und iPhone Offline Kartentest ausstehend"
 }

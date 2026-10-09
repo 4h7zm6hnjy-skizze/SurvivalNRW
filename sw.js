@@ -1,5 +1,5 @@
-/* Survival Deutschland 1.7.0 — single-file app shell; gepruefte lokale App-Dateien. */
-const CACHE='survival-de-v1.7.0-single';
+/* Survival Deutschland 1.7.1 — single-file app shell; gepruefte lokale App-Dateien. */
+const CACHE='survival-de-v1.7.1-single';
 const MAP_CACHE='survival-de-licensed-map-tiles-v1'; // Vorher gespeicherte Karten beibehalten
 const FILES=['./index.html','./version.json','./sw.js'];
 const TILE_HOSTS=['sgx.geodatenzentrum.de','e.tiles.maps.eox.at'];
