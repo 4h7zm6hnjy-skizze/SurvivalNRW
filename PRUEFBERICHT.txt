@@ -1,6 +1,8 @@
-Survival Deutschland v1.8.4
+Survival Deutschland v1.8.5 — Fehlerkorrektur
 
-Aktualisiert: Bereich Fische & Flusskrebse in NRW.
-- Zubereitungshinweise für alle Arten ergänzt.
-- Fotorealistische KI-Lehrbilder für die wichtigsten hinterlegten Fisch- und Krebsarten eingebunden; übrige Arten behalten die Lehrskizze als Fallback.
-Hinweis: Lehrbilder ersetzen keine sichere Artbestimmung; rechtliche Zulässigkeit und Gewässerbelastung müssen immer zusätzlich geprüft werden.
+Behoben: JavaScript-Syntaxfehler in Version 1.8.4, durch falschen Einfügeort der Bilddaten. Dies hatte eine leere Hauptansicht und nicht funktionierende Navigation verursacht.
+Bilddaten wurden in SURVIVAL_INLINE_IMAGES eingefügt. Neue Cache-Version 1.8.5.
+
+Fotorealistische Bilder sind KI-Lehrbilder, keine geprüften Bestimmungsfotos. Zubereitung und Rechtslage müssen eigenständig fachlich überprüft werden.
+
+Nachkontrolle: Krebs-KI-Lehrbilder korrekt auf die jeweilige Kachel zugeschnitten.

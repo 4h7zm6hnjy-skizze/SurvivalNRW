@@ -1,10 +1,10 @@
 {
-  "version": "1.8.4",
+  "version": "1.8.5",
   "released": "2026-10-09",
   "notes": [
-    "Fische & Flusskrebse: KI-Lehrbilder für wichtige NRW-Arten eingebunden, übrige Arten mit Lehrskizzen als Fallback",
-    "Zu allen Fisch-, Krebs- und Krabbenarten wurden Zubereitungshinweise ergänzt",
-    "Rechts- und Hygieniewarnungen bleiben sichtbar: Mindestmaß ist keine Verzehrfreigabe, geschützte Arten bleiben ohne Entnahme"
+    "Startfehler aus Version 1.8.4 behoben: eingebettete Fisch-/Krebsbilder befinden sich nun in der richtigen Bilddatentabelle",
+    "Navigation, alle früheren Module, 38 Fisch-/Krebsarten, Zubereitungshinweise und KI-Lehrbilder bleiben enthalten",
+    "Das Update verwendet einen neuen Cache-Namen für die Installation"
   ],
   "limits": "Kein echter iPhone-Flugmodustest, keine botanische oder mykologische Bestimmung, keine Live-Rechts-/Wetterdaten. Offline-Kartendaten vorher laden und prüfen.",
   "limit": "Gilt nur für NRW; lokale Gewässerordnungen und aktuelle Rechtslage vor jedem Fang prüfen. Lehrskizzen keine Artenfotos. Keine automatische Fangfreigabe."
